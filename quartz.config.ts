@@ -7,7 +7,7 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
-    baseUrl: "yourusername.github.io/your-repo-name",
+    baseUrl: "zhongli0226.github.io",
     ignorePatterns: [
       "private",
       ".obsidian",
