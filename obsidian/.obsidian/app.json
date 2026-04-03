@@ -1,7 +1,8 @@
 {
-  "attachmentFolderPath": "pic",
-  "newFileLocation": "folder",
-  "newFileFolderPath": "notes",
+  "useTab": false,
   "showInlineTitle": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./"
 }
