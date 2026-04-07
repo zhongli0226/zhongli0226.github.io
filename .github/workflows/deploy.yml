@@ -59,8 +59,9 @@ jobs:
           # Update baseUrl in our config
           sed -i "s|baseUrl: \".*\"|baseUrl: \"${BASE_URL}\"|g" quartz.config.ts
 
-          # Copy our config and custom styles into Quartz
+          # Copy our config, layout, and custom styles into Quartz
           cp quartz.config.ts quartz-build/quartz.config.ts
+          cp quartz.layout.ts quartz-build/quartz.layout.ts
           cp custom.scss quartz-build/quartz/styles/custom.scss
           grep "baseUrl:" quartz-build/quartz.config.ts
 
