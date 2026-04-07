@@ -55,7 +55,7 @@ title: Luckfox开发--SDK环境部署
 2. 安装Ubuntn
 ![image.png](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/20240811163005.png)
 
-> [!可能出现的问题]
+> [!NOTE]**可能出现的问题**:
 > 部分版本安装可能出现显示界面不全的情况，如上，可以使用`Ctrl + Alt + T`打开终端，输入`xrandr -s 1280x720`调节下分辨率。
 > ![image.png](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/20240811163203.png)
 
@@ -232,7 +232,7 @@ sudo ./build.sh
 - 注意编译ubuntu时需要注意使用sudo，否则会导致文件系统错误
 - 下文就不一一区分两者指令区别，请自行根据情况选择
 
-> [!NOTE] 注意
+> [!NOTE]
 > 初次编译时间较长，且在初次编译的过程中会下载许多的工具包。有些网络情况不是很好的，有时会中断报错，一定要有耐心坚持编译完成，我这边第一次编译连续看了好几个晚上才完成第一次编译。
 > 由于编译使用的是buildroot系统，可以进入其menuconfig的配置界面修改下载软件的镜像地址。
 

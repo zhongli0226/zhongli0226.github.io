@@ -96,7 +96,7 @@ extern "C" uint32_t get_web_length(void)
 }
 ```
 
-> [!NOTE] Title
+> [!NOTE]
 > 在 html 代码导入字符串中 `"` 符号需要在前方加入 `\` 符号。才能正确识别
 
 在网页回调函数接口中获取刷新好的网页字符串，并发送到服务器上。

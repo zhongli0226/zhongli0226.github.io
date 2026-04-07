@@ -11,7 +11,7 @@ title: Luckfox开发--Flash镜像制作
 ，这里我选择**W25N04KVZEIR**。焊接时注意温度，不要影响到旁边其他器件。焊接完如同。
 ![IMG_20240921_200553.jpg](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/IMG_20240921_200553.jpg)
 
-> [!NOTE] 注意
+> [!NOTE]
 > 将Flash焊接完成后，我这边使用官方的上位机烧录工具是无法得到正确的Flash烧录信息的，只有将Flash镜像制作完成，并且正确下载后才能确认焊接正常，所以这里无法验证是否焊接正确，需要对自己的焊接水平有一定自信。
 
 # 制作镜像
@@ -19,7 +19,7 @@ title: Luckfox开发--Flash镜像制作
 进入之前搭建好的虚拟机系统中，找到SDK包的路径，在目录`luckfox-pico/project/cfg/BoardConfig_IPC`下，复制`BoardConfig-SD_CARD-Buildroot-RV1103_Luckfox_Pico-IPC.mk`文件，改名为`BoardConfig-SPI_NAND-Buildroot-RV1103_Luckfox_Pico_Pro-IPC.mk`并在新文件下修改下面几处：
 ![image.png](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/20240922133749.png)
 
-> [!NOTE] 注意
+> [!NOTE]
 > 210M(rootfs)可以根据实际需要选择不同大小
 
 在目录`luckfox-pico/sysdrv/source/kernel/arch/arm/boot/dts`下，复制`rv1103g-luckfox-pico.dts`，改名为`rv1103g-luckfox-pico-pro.dts`，并在新文件下修改下面几处：

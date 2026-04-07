@@ -14,7 +14,7 @@ txdata transfer > hardware max supported len
 查看一下这个宏`SPI_LL_DMA_MAX_BIT_LEN`
 ![image.png](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/20241014193007.png)
 
-> [!注意] 
+> [!NOTE] 
 > 这里注意下，这个宏在不同芯片中，体现的是不同的，在esp32s3中是1<<18 ,在esp32中却是1<<24。
 
 这时看下官方的这里的驱动接口：

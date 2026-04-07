@@ -42,7 +42,7 @@ PARAMETER top_k 30
 PARAMETER top_p 0.95
 PARAMETER temperature 0.6
 ```
-> [!NOTE] Title
+> [!NOTE]
 > 注意在设置完成上下文窗口后显存会增加，若想了解显存具体增加了多少可以使用下面这个工具来大致推算一下。[DeepSeek 模型兼容性检测](https://tools.thinkinai.xyz/#/server-calculator)
 3. 创建新模型
 ```

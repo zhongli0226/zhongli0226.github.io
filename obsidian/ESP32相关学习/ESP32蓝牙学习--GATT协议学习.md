@@ -239,7 +239,7 @@ void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *par
 }
 ```
 
-> [!NOTE] 说明
+> [!NOTE]
 > GAP 的回调函数有很多，通过枚举`esp_gap_ble_cb_event_t`可查看。
 ### gatts_profile_event_handler
 

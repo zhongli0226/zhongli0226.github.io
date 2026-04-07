@@ -34,7 +34,7 @@ title: WSL安装与配置
 
 
 
-> [!NOTE] 注意
+> [!NOTE] **注意**:
 > 若有些选项无法勾选，可能是电脑没有开启虚拟化，需要进入电脑 BIOS 系统开启电脑虚拟化，电脑虚拟化是否开启可以在任务管理器中查看
 > ![image.png](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/20250803173807.png)
 

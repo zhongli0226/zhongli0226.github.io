@@ -44,7 +44,7 @@ title: 编程思维与 AI-coding 结合
 建议结合 Git 分支策略进行版本迭代，参考：[Gitflow 工作流程](Gitflow%20工作流程.md)
 
 > [!NOTE]
- > 注：流程要结合实际。个人/小型项目中，单分支（如 `master/main`）+ 清晰版本标签即可；团队协作建议使用完整分支模型（`main/dev/feature/release/hotfix`）。
+> 注：流程要结合实际。个人/小型项目中，单分支（如 `master/main`）+ 清晰版本标签即可；团队协作建议使用完整分支模型（`main/dev/feature/release/hotfix`）。
  
 快速迭代的关键是“先交付最小可用（MVP），再在反馈中扩展”。
 ![](https://explinks-blog.oss-cn-beijing.aliyuncs.com/md/2025/01/a82c14dad4a350085c11ca1f66418a76.png)
@@ -76,7 +76,7 @@ title: 编程思维与 AI-coding 结合
  ```
 
 > [!NOTE]
- > 旁注：国外主播 Vedal 的 Neuro-sama 是较完整的娱乐向 AI 产品形态之一，其“记忆/设定”工程值得借鉴。本文聚焦在通用工程落地方法。
+> 旁注：国外主播 Vedal 的 Neuro-sama 是较完整的娱乐向 AI 产品形态之一，其“记忆/设定”工程值得借鉴。本文聚焦在通用工程落地方法。
  
  
 ---
