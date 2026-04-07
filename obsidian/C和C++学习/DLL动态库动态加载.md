@@ -23,7 +23,7 @@ hdll=LoadLibrary("Image Enhance.dll");
 
 调用成功后返回函数地址，否则返回0或NULL
 
-> [!NOTE] 错误原因和解决方法
+> [!NOTE]**错误原因和解决方法**:
 > 1.路径不对（程序与dll要放在同一文件夹）
 > 2.dll本身错误（依赖其他dll）借助depends.exe查看DLL依赖那些DLL
 
@@ -35,7 +35,7 @@ fun1 =(DLLfun)GetProcAddress(hdll, "sharpen");
 
 调用成功后返回函数地址，否则返回0或NULL
 
-> [!NOTE] 错误原因和解决方法
+> [!NOTE]**错误原因和解决方法**:
 > 当返回为0时，可以使用depends.exe工具来查看DLL里函数接口的具体的名字，可以发现会出现这种"?? 0sharpen @@QAE@XZ"奇怪的命名方式，软件上可以试着吧这个段替换原函数名测试一下，发现运行应该就正常了。
 > 但是这种方式调用起来很不方式，其实这是创建的DLL库时，写的代码不够规范。
 > 头文件中定义__declspec(dllexport) 时，要加上extern "C",从而规范dll的输出符合C标准，否则容易生成带@之类的字符串。extern"C"使得在C++中使用C编译方式成为可能。在"C++"下定义"C"函数，需要加extern"C"关键词。用extern "C"来指明该函数使用C编译方式。加上extern "C"后，输出函数的形式为"sharpen"，符合预期标准。
