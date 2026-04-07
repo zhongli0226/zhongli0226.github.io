@@ -51,7 +51,8 @@ LVGL(Light and Versatile Graphics Library，轻巧而多功能的图形库)是�
 
 源码链接中下载一份源码，lvgl已经更新迭代了很多个版本，这里我们选择8.2.0版本进行移植。
 
-> 注意：不同版本之间可能有很大的不同，所以看本篇教程移植的的小伙伴尽量使用与本文相同的版本。
+> [!NOTE] 注意
+> 不同版本之间可能有很大的不同，所以看本篇教程移植的的小伙伴尽量使用与本文相同的版本。
 
 ![LVGL移植流程](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/LVGL移植流程1.png)
 
@@ -85,6 +86,7 @@ LVGL(Light and Versatile Graphics Library，轻巧而多功能的图形库)是�
 
 ![LVGL移植流程](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/LVGL移植流程7.png)
 
+> [!NOTE] 提示
 > 此工程在gcc+makefile+vscode下开发。Keil开发只需生成相关工程，剩下基本相同。
 
 ## ③ 添加入工程
@@ -93,7 +95,8 @@ LVGL(Light and Versatile Graphics Library，轻巧而多功能的图形库)是�
 
 ![LVGL移植流程](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/LVGL移植流程8.png)
 
-> 注意：源文件的改名，将template后缀全部删除。
+> [!NOTE] 注意
+> 源文件的改名，将template后缀全部删除。
 
 makefile文件的修改，主要要包含相关文件进入编译：
 
@@ -314,6 +317,7 @@ C_INCLUDES =  \
 -IUser/ui_demo
 ```
 
+> [!NOTE] 提示
 > KEIL添加方式这里不在详细描述。
 ### 增加C99模式
 
@@ -325,6 +329,7 @@ C_INCLUDES =  \
 
 将这些文件的开头`#if 0`改成`#if 1`
 
+> [!NOTE] 提示
 > conf相关配置以后单独再详细说明，这里就简单使用默认。
 
 ### 修改lv_port_disp文件
@@ -340,6 +345,7 @@ C_INCLUDES =  \
 
 ![LVGL移植流程](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/LVGL移植流程10.png)
 
+> [!TIP] 提示
 > 这里提供了三种方式，可以根据需要选择。
 >
 > 我这里选择为方式2，建议不懂原理的情况下不要选择方式3

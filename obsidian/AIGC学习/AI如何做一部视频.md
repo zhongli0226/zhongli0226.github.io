@@ -47,7 +47,8 @@ tags:
 | 视频生成 | 即梦 AI（视频生成） | 用“智能多帧”拼成长镜头/连贯片段 |
 | 后期剪辑 | Adobe Premiere Pro（PR）等 | 配乐、节奏剪辑、补镜头、导出 |
 
-> 相关延伸：如果你偏“可控性/可复现”，也可以走 `Stable Diffusion + ControlNet` 的路线（见：[[ControNet基础学习]]、[[ControlNet学习实战1--字体海报]]、[[Stable_diffusion入门学习]]）。
+> [!TIP] 相关延伸
+> 如果你偏”可控性/可复现”，也可以走 `Stable Diffusion + ControlNet` 的路线（见：[[ControNet基础学习]]、[[ControlNet学习实战1--字体海报]]、[[Stable_diffusion入门学习]]）。
 
 ### 2.2 素材准备（强烈建议先准备）
 

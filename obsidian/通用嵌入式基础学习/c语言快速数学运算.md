@@ -12,6 +12,7 @@ title: c语言快速数学运算
 
 # 快速平方根求导
 
+> [!NOTE] 背景
 > 代码出自90年代经典游戏Quake-III Arena (雷神之锤3)，QUAKE的开发商ID SOFTWARE 遵守GPL协议，公开了QUAKE-III的原代码，在/code/game/q_math.c里发现了这样一段代码。
 >
 > 它的作用是将一个数开平方并取倒。这段代码比(float)(1.0/sqrt(x))快4倍
@@ -139,6 +140,7 @@ uint32_t usqrt_simple(uint32_t d, uint32_t N)
 }
 ```
 
+> [!NOTE] 提示
 > 不够实用，只适用于定点数，d为需要平方根的数据，N为结果最小二进制的位数，
 
 测试

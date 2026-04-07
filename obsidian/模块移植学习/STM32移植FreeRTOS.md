@@ -105,9 +105,8 @@ int main(void)
 
 要注意的是我们完成最基本的配置以后，需要将我们的**Timebase Source**修改一下，修改成除了**滴答定时器**的其他定时器。
 
-> **为什么不可以使用滴答定时器呢？**
->
->      在**FreeRTOS**中我们的**SysTick定时器**被用于了我们的**始终基准**，它用来实现我们的任务切换，我们的**SysTick定时器**每次触发我们的**中断**（**默认是一毫秒，可以自行修改为其他值**）
+> [!NOTE] 为什么不可以使用滴答定时器呢？
+> 在**FreeRTOS**中我们的**SysTick定时器**被用于了我们的**始终基准**，它用来实现我们的任务切换，我们的**SysTick定时器**每次触发我们的**中断**（**默认是一毫秒，可以自行修改为其他值**）
 
 这里再配置一个串口，便于确认任务切换了：
 
@@ -332,7 +331,8 @@ keil添加文件基本上熟悉STM32应该都很熟悉了，这里不过于详�
 
 ![FreeRTOS移植流程](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/FreeRTOS移植流程13.png)
 
-> 注意这里port.c和刚刚GCC的不是同一个
+> [!NOTE] 注意
+> 这里port.c和刚刚GCC的不是同一个
 
 ![FreeRTOS移植流程](https://cdn.jsdelivr.net/gh/zhongli0226/PicGoCDN/img/FreeRTOS移植流程14.png)
 
@@ -406,7 +406,8 @@ int fputc(int ch, FILE *f)
 
 测试现象：串口打印this is task1，灯闪烁。
 
-> 注意，尽量在任务中不要使用HAL_delay()延迟函数，不然会出现任务卡死的情况。
+> [!WARNING] 注意
+> 尽量在任务中不要使用HAL_delay()延迟函数，不然会出现任务卡死的情况。
 
 # 后记
 

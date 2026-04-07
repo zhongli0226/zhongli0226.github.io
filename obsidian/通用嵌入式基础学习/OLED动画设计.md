@@ -130,7 +130,8 @@ uint32_t GUI_ComeBMP(uint8_t x, uint8_t y, uint8_t px, uint8_t py, const uint8_t
 * `OLED_Display`oled刷新显示
 * `Get_OLEDBuffer`获得内部oled缓存地址。
 
-> 不足处：这里刷新是对于整个屏幕刷新，可以根据实际情况对这里进行调整。
+> [!NOTE] 不足处
+> 这里刷新是对于整个屏幕刷新，可以根据实际情况对这里进行调整。
 
 # 菜单界面滑动
 
@@ -240,5 +241,6 @@ void GUI_DrawPoint(uint8_t x, uint8_t y, uint8_t color)
 
 [CW32_MiniHeating: 利用CW32实现恒温加热台 (gitee.com)](https://gitee.com/zhong_li/CW32_MiniHeating)
 
+> [!NOTE] 不足处
 > 这里比较不足的是方框滑动，并不是很丝滑，这里可能需要使用U8G2的图形库才能比较好的实现，自己实现的话需要研究一下。
 

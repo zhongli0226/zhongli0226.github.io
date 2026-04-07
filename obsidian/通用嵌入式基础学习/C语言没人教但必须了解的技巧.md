@@ -53,9 +53,10 @@ typedef signed char 		int8; 		/* Signed 8 bit value */
 #define MIN( x, y ) ( ((x) < (y)) ? (x) : (y) )
 ```
 
-> 注意这里的一些特殊情况详细可参考文章
+> [!NOTE] 注意
+> 这里的一些特殊情况详细可参考文章
 > [[嵌入式小技巧#② 比较两个数大小宏定义]]
->  [嵌入式小技巧 - 一月一星辰 - 博客园 (cnblogs.com)](https://www.cnblogs.com/tangwc/p/17599297.html)
+> [嵌入式小技巧 - 一月一星辰 - 博客园 (cnblogs.com)](https://www.cnblogs.com/tangwc/p/17599297.html)
 
 ## 4.防止数据溢出
 
