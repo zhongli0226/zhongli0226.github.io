@@ -1,0 +1,19 @@
+@use "./base.scss";
+
+// === 字体加大一号 ===
+html {
+  font-size: 17px;
+}
+
+// === 左侧栏靠左 + 收起优化 ===
+@media (min-width: 1200px) {
+  .sidebar.left {
+    padding-left: 0.5rem !important;
+    padding-right: 1rem !important;
+  }
+
+  // 缩小栏间距，让左侧栏更靠左
+  .page > #quartz-body {
+    column-gap: 2px !important;
+  }
+}
