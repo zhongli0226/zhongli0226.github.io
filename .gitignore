@@ -11,6 +11,7 @@ obsidian/.obsidian/community-plugins.json
 node_modules/
 .quartz-cache/
 public/
+quartz-build/
 
 # Keep configuration files
 !quartz.config.ts

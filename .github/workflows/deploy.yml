@@ -28,61 +28,50 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install
+      - name: Clone Quartz
+        run: |
+          git clone --depth 1 https://github.com/jackyzha0/quartz.git quartz-build
 
       - name: Install Quartz dependencies
         run: |
-          cd node_modules/@jackyzha0/quartz
-          npm install
+          cd quartz-build
+          npm ci
 
-      - name: Setup Quartz content
+      - name: Setup content
         run: |
-          cd node_modules/@jackyzha0/quartz
-          rm -rf content
-          ln -s ../../../obsidian content
+          rm -rf quartz-build/content
+          cp -r obsidian quartz-build/content
 
-          # Verify symlink is correct
-          echo "Content symlink created:"
-          ls -la content/
-
-      - name: Update baseUrl in config
+      - name: Update config
         run: |
-          # Extract owner and repo name from GITHUB_REPOSITORY
           REPO_OWNER="${GITHUB_REPOSITORY%/*}"
           REPO_NAME="${GITHUB_REPOSITORY#*/}"
-          BASE_URL="${REPO_OWNER}.github.io/${REPO_NAME}"
 
-          echo "Detected GitHub Pages URL: https://${BASE_URL}/"
+          # For user/org sites (repo named username.github.io), no path prefix
+          if [ "$REPO_NAME" = "${REPO_OWNER}.github.io" ]; then
+            BASE_URL="${REPO_OWNER}.github.io"
+          else
+            BASE_URL="${REPO_OWNER}.github.io/${REPO_NAME}"
+          fi
 
-          # Update baseUrl in quartz.config.ts
-          sed -i "s|yourusername\.github\.io/your-repo-name|${BASE_URL}|g" quartz.config.ts
+          echo "GitHub Pages URL: https://${BASE_URL}/"
 
-          # Verify it was updated
-          echo "Config after update:"
-          grep "baseUrl:" quartz.config.ts
+          # Update baseUrl in our config
+          sed -i "s|baseUrl: \".*\"|baseUrl: \"${BASE_URL}\"|g" quartz.config.ts
 
-      - name: Copy config to Quartz
-        run: |
-          cp quartz.config.ts node_modules/@jackyzha0/quartz/quartz.config.ts
-
-          # Verify the config in Quartz location
-          echo "Quartz config baseUrl:"
-          grep "baseUrl:" node_modules/@jackyzha0/quartz/quartz.config.ts
+          # Copy our config into Quartz
+          cp quartz.config.ts quartz-build/quartz.config.ts
+          grep "baseUrl:" quartz-build/quartz.config.ts
 
       - name: Build site
         run: |
-          cd node_modules/@jackyzha0/quartz
+          cd quartz-build
           npx quartz build
-
-      - name: Copy output
-        run: |
-          cp -r node_modules/@jackyzha0/quartz/public ./public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: quartz-build/public
 
   deploy:
     needs: build
