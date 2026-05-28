@@ -56,6 +56,7 @@ title: 我的笔记花园
 - [[Luckfox开发--SDK环境部署]]
 - [[Luckfox开发--Flash镜像制作]]
 - [[WSL安装与配置]]
+- [[Linux自启动]]
 # C/C++
 
 - [[类的权限与应用]]
