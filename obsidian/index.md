@@ -103,3 +103,4 @@ title: 我的笔记花园
 - [[cmake开发环境--msys2搭建]]
 - [[doxygen使用说明]]
 - [[VScode插件配置]]
+- [[国内购买ChatGPT]]
