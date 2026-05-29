@@ -10,6 +10,6 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@jackyzha0/quartz": "git+https://github.com/jackyzha0/quartz.git"
+    "@jackyzha0/quartz": "git+https://github.com/jackyzha0/quartz.git#v4"
   }
 }

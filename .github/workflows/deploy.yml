@@ -30,7 +30,7 @@ jobs:
 
       - name: Clone Quartz
         run: |
-          git clone --depth 1 https://github.com/jackyzha0/quartz.git quartz-build
+          git clone --branch v4 --single-branch --depth 1 https://github.com/jackyzha0/quartz.git quartz-build
 
       - name: Install Quartz dependencies
         run: |
