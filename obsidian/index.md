@@ -105,3 +105,4 @@ title: 我的笔记花园
 - [[VScode插件配置]]
 - [[云服务器使用心得]]
 - [[国内购买ChatGPT]]
+- [[Sunshine和Moonlight将Android平板设置为Windows副屏]]
